@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #495579; -fx-border-color: #fffbeb; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HalamanCrudAdminController">
+   <children>
+      <Label layoutX="217.0" layoutY="14.0" text="Masukan Data Hadiah" textFill="#fffbeb">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffbeb" height="215.0" layoutX="6.0" layoutY="47.0" stroke="TRANSPARENT" strokeType="INSIDE" width="588.0" />
+      <TableView fx:id="TableBarang" layoutX="6.0" layoutY="263.0" prefHeight="131.0" prefWidth="588.0" style="-fx-background-color: #fffbeb;">
+         <columns>
+            <TableColumn fx:id="KodeBarang" prefWidth="99.0" text="Kode Barang" />
+            <TableColumn fx:id="JenisBarang" prefWidth="106.0" text="Jenis Barang" />
+            <TableColumn fx:id="NamaBarang" prefWidth="154.0" text="Nama Barang" />
+            <TableColumn fx:id="Quantity" prefWidth="113.0" text="Quantity" />
+            <TableColumn fx:id="Harga" prefWidth="105.0" text="Harga" />
+         </columns>
+      </TableView>
+      <VBox layoutX="28.0" layoutY="48.0" prefHeight="172.0" prefWidth="284.0">
+         <children>
+            <HBox prefHeight="37.0" prefWidth="243.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="97.0" text="Kode Barang">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="TeksKodeBarang" prefHeight="25.0" prefWidth="148.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="243.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="97.0" text="Jenis Barang">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="TeksJenisBarang" prefHeight="25.0" prefWidth="148.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="243.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="97.0" text="Nama Barang">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="TeksNamaBarang" prefHeight="25.0" prefWidth="148.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="243.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="97.0" text="Quantity">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="TeksQuantity" prefHeight="25.0" prefWidth="148.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="37.0" prefWidth="243.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="97.0" text="Harga">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="TeksHarga" prefHeight="25.0" prefWidth="148.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="ButtonLogoutAdmin" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#LogoutButton" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #251749;" text="Logout" textFill="#fffbeb" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="357.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Hadiah_Gift.png" />
+         </image>
+      </ImageView>
+      <ButtonBar buttonMinWidth="65.0" layoutX="12.0" layoutY="224.0" prefHeight="40.0" prefWidth="267.0">
+        <buttons>
+          <Button fx:id="ButtonSave" mnemonicParsing="false" onAction="#SaveButton" style="-fx-background-color: #251749;" text="Save" textFill="#fffbeb" />
+            <Button fx:id="ButtonUpdate" mnemonicParsing="false" onAction="#UpdateButton" style="-fx-background-color: #251749;" text="Update" textFill="#fffbeb" />
+            <Button fx:id="ButtonDelete" mnemonicParsing="false" onAction="#DeleteButton" style="-fx-background-color: #251749;" text="Delete" textAlignment="CENTER" textFill="#fffbeb" />
+            <Button fx:id="ButtonView" mnemonicParsing="false" onAction="#ViewButton" prefHeight="16.0" prefWidth="77.0" style="-fx-background-color: #251749;" text="View" textFill="#fffbeb" />
+        </buttons>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+      </ButtonBar>
+   </children>
+</AnchorPane>

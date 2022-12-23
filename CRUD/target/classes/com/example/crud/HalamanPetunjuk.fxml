@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #495579;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HalamanPetunjukController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263159" height="301.0" layoutX="6.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="25.0" strokeWidth="0.0" width="286.0" y="10.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263159" height="301.0" layoutX="299.0" layoutY="81.0" stroke="TRANSPARENT" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="25.0" strokeWidth="0.0" width="286.0" x="10.0" y="10.0" />
+      <Ellipse fill="#263159" layoutX="300.0" layoutY="44.0" radiusX="66.0" radiusY="41.0" stroke="TRANSPARENT" strokeType="INSIDE">
+         <effect>
+            <Blend />
+         </effect>
+      </Ellipse>
+      <Label layoutX="242.0" layoutY="30.0" prefHeight="25.0" prefWidth="138.0" text="Tips Penggunaan" textFill="#fffbeb">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="93.0" text="Admin" textFill="#fffbeb">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="437.0" layoutY="91.0" prefHeight="25.0" prefWidth="30.0" text="User" textFill="#fffbeb">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox layoutX="15.0" layoutY="110.0" prefHeight="280.0" prefWidth="280.0">
+         <children>
+            <Label prefHeight="29.0" prefWidth="273.0" text="1. Pada menu utama, pilih menu 'Login For Admin'." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="421.0" text="2. Setelah masuk, masukkan username dan password " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="255.0" text="    sesuai dengan yangada pada database." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="421.0" text="3. Setelah berhasil login, admin dapat menginput data " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="   dengan caramengisi Text Field untuk masing-masing " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="273.0" text="   data dan menekan tombol 'Save'.Data akan otomatis " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="   tersimpan." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="418.0" text="4. Jika setelah menginput ada data yang ingin diedit, " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="273.0" text="   admin dapatmengupdate data trsebut denga cara " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="273.0" text="   mengisi ext Field masing-masingdata dan menekan" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="273.0" text="   tombol 'Update'." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="286.0" text="5. Untuk menghapus data, cukup isi kode barang yang ingin" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="    dihapuspada Text Field di bagian kanan dan tekan tombol" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="    'Delete'. Data akanotomatis terhapus." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="6. Admin dapat melihat data yang sudah diinput, diedit, dan " textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="    dihapus padatable view dan juga list view." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="7. Jika sudah selesai, admin dapat kembali ke menu dengan" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label text="    menekantombol 'Log out'." textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="322.0" layoutY="111.0" prefHeight="139.0" prefWidth="273.0">
+         <children>
+            <Label prefHeight="26.0" prefWidth="273.0" text="1. Pada menu utama, pilih menu 'Pilih Hadiah'." textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="421.0" text="2. Setelah masuk, pilih yang ingin dibeli lalu tekan tombol" textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="255.0" text="    'pilih'di bawah hadiah tersebut." textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="421.0" text="3. Setelah memilih barangnya, masukkan uang anda." textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="418.0" text="4. Nominal bisa langsung di input sesuai harga barang " textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="26.0" prefWidth="273.0" text="   yang kalian pilih " textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="15.0" prefWidth="286.0" text="5. Jika nominal uang yang dimasukkan lebih dari ketentuan," textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="    maka programakan meminta inputan sesuai " textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="349.0" text="    nominal harga." textAlignment="JUSTIFY" textFill="#fffbeb">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button fx:id="ButtonBack" layoutX="12.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #251749; -fx-background-radius: 5;" text="Back" textFill="#fffbeb" />
+   </children>
+</AnchorPane>

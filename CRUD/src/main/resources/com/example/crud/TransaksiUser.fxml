@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fffbeb;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HalamanTransaksiController">
+   <children>
+      <Label layoutX="252.0" layoutY="14.0" text="Toko Hadiah" textFill="#263159">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="ButtonBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackButton" style="-fx-background-color: #263159;" text="Back" textFill="#fffbeb" />
+      <Pane layoutY="47.0" prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #495579;">
+         <children>
+            <VBox layoutX="14.0" layoutY="14.0" prefHeight="150.0" prefWidth="263.0">
+               <children>
+                  <Label fx:id="LabelEror" prefHeight="17.0" prefWidth="257.0" textFill="#e81111" />
+                  <HBox prefHeight="38.0" prefWidth="263.0">
+                     <children>
+                        <Label text="Nama Pembeli   :" textFill="#fffbeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="NamaUser" promptText="Nama ">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="263.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="98.0" text="Item                   :" textFill="#fffbeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LabelItem" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #ffff;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="263.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="98.0" text="Harga                :" textFill="#fffbeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LabelHarga" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #ffff;">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="38.0" prefWidth="263.0">
+                     <children>
+                        <Label prefHeight="19.0" prefWidth="98.0" text="Masukan Uang :" textFill="#fffbeb">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="InputUang" promptText="Masukan Uang">
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <TableView fx:id="tabelhadiahuser" layoutX="336.0" prefHeight="200.0" prefWidth="263.0">
+              <columns>
+                <TableColumn fx:id="kodebarang" prefWidth="77.0" text="Kode" />
+                <TableColumn fx:id="namabarang" prefWidth="94.0" text="Nama" />
+                  <TableColumn fx:id="hargabarang" prefWidth="91.0" text="Harga" />
+              </columns>
+            </TableView>
+            <Button fx:id="ButtonBeli" layoutX="222.0" layoutY="164.0" mnemonicParsing="false" onAction="#BeliButton" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #263159;" text="Beli" textFill="#fffbeb" />
+         </children>
+      </Pane>
+      <ScrollPane layoutX="-1.0" layoutY="247.0" prefHeight="156.0" prefWidth="600.0">
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="585.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="5.0" text="Bucket Bunga" textFill="#263159">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="22.0" prefHeight="121.0" prefWidth="585.0">
+                     <children>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="SOMETIMES">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/Bucket%201.jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Biru">
+                                 <VBox.margin>
+                                    <Insets left="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="labelharga" prefHeight="17.0" prefWidth="59.0" text="Rp. 92.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="15.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket1" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/WhatsApp%20Image%202022-12-09%20at%2012.15.24%20(1).jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Biru Putih">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="74.0" text="Rp. 100.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" right="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket2" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="24.0" right="25.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/WhatsApp%20Image%202022-12-09%20at%2012.15.24.jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Merah Putih">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 50.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket3" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/WhatsApp%20Image%202022-12-09%20at%2012.15.25%20(1).jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Pink">
+                                 <VBox.margin>
+                                    <Insets left="18.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 92.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="15.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket4" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/WhatsApp%20Image%202022-12-09%20at%2012.15.26.jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Mawar">
+                                 <VBox.margin>
+                                    <Insets left="13.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 80.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket5" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@Bucket%20bunga/WhatsApp%20Image%202022-12-09%20at%2012.15.28%20(1).jpeg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Bunga Tulip">
+                                 <VBox.margin>
+                                    <Insets left="18.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 70.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBucket6" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label layoutX="14.0" layoutY="176.0" text="Boneka" textFill="#263159">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="193.0" prefHeight="121.0" prefWidth="585.0">
+                     <children>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@Boneka/download%20(1).jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Boneka Panda">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 70.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihGradu1" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="25.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="12.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@Boneka/boneka%20beruang.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Boneka Beruang">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 80.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="12.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihGradu2" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="24.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@Boneka/boneka%20koala.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Boneka Koala">
+                                 <VBox.margin>
+                                    <Insets left="8.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 75.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="15.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#pilihGradu3" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@Boneka/boneka%20awan.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Boneka Awan">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 68.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihGradu4" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Boneka/boneka%20pinguin.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Boneka Pinguin">
+                                 <VBox.margin>
+                                    <Insets left="7.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 50.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihGradu5" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Boneka/b%20kucing%203.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Boneka Kucing">
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 50.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihGradu6" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label layoutX="14.0" layoutY="348.0" text="Gift Box" textFill="#263159">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <HBox layoutY="365.0" prefHeight="121.0" prefWidth="585.0">
+                     <children>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%201.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="18.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 1">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 55.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="17.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBrith1" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="25.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%202.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="19.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 2">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 60.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="15.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBrith2" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="24.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%203.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 3">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 65.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBrith3" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%204.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 4">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 70.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#Pilihbrith4" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%205.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 5">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 72.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBrith5" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="125.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="69.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Gift%20Box/paket%206.jpg" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="15.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label text="Paket 6">
+                                 <VBox.margin>
+                                    <Insets left="29.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="59.0" text="Rp. 75.000" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="20.0" right="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#PilihBrith6" style="-fx-background-color: #263159;" text="Pilih" textFill="#fffbeb">
+                                 <VBox.margin>
+                                    <Insets left="30.0" right="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

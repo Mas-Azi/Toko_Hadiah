@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="HalamanLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #495579; -fx-border-color: #fffbeb; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HalamanLoginController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263159" height="392.0" layoutX="6.0" layoutY="4.0" stroke="TRANSPARENT" strokeType="INSIDE" width="256.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffbeb" height="254.0" layoutX="283.0" layoutY="73.0" stroke="TRANSPARENT" strokeType="INSIDE" width="294.0" />
+      <VBox layoutX="307.0" layoutY="131.0" prefHeight="121.0" prefWidth="244.0">
+         <children>
+            <Label fx:id="ErorLogin" prefHeight="17.0" prefWidth="227.0" />
+            <Label text="Username" textFill="#263159">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="UsernameAdmin" promptText="Username" />
+            <Label text="Password" textFill="#263159">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="PasswordAdmin" promptText="Password" />
+         </children>
+      </VBox>
+      <Button fx:id="Buttonlogin" layoutX="417.0" layoutY="261.0" mnemonicParsing="false" onAction="#LoginButton" style="-fx-background-color: #251749;" text="Login" textFill="#fffbeb">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonExit" layoutX="489.0" layoutY="261.0" mnemonicParsing="false" onAction="#ButtonExitlogin" prefHeight="35.0" prefWidth="62.0" style="-fx-background-color: #251749;" text="Exit" textFill="#fffbeb">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="382.0" layoutY="83.0" text="Login Admin" textFill="#251749">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@HalamanMenu.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="27.0" text="Selamat Datang" textFill="#fffbeb">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="78.0" text="Di Toko Hadiah" textFill="#fffbeb">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

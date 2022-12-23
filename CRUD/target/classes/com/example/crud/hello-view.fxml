@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="HalamanMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #495579; -fx-border-color: #FFFBEB; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud.HelloController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#263159c4" height="392.0" layoutX="4.0" layoutY="4.0" stroke="TRANSPARENT" strokeType="INSIDE" width="255.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="31.0" layoutY="43.0" text="Selamat Datang" textAlignment="CENTER" textFill="#fffbed">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="54.0" layoutY="83.0" text="Di Toko Hadiah" textFill="#fffbed">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="345.0" layoutY="69.0" prefHeight="275.0" prefWidth="186.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Silahkan Pilih Menu" textFill="#fffbed">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="12.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="LoginButton" mnemonicParsing="false" onAction="#LoginAdmin" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: #263159;" text="Login Admin" textFill="#fffbeb">
+               <VBox.margin>
+                  <Insets bottom="12.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="HadiahButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#PilihHadiah" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: #263159;" text="Pilih Hadiah" textFill="#fffbeb" textOverrun="CLIP">
+               <VBox.margin>
+                  <Insets bottom="12.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="TipsButton" mnemonicParsing="false" onAction="#TipsPenggunaan" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: #263159;" text="Tips Penggunaan" textFill="#fffbeb" VBox.vgrow="SOMETIMES">
+               <VBox.margin>
+                  <Insets bottom="12.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="ExitProgramButton" mnemonicParsing="false" onAction="#ExitButton" prefHeight="33.0" prefWidth="162.0" style="-fx-background-color: #263159;" text="Exit" textFill="#fffbeb">
+               <VBox.margin>
+                  <Insets bottom="12.0" left="8.0" right="8.0" top="8.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="35.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@HalamanMenu.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

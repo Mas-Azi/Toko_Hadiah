@@ -1,5 +1,5 @@
 package com.example.crud;
-import
+
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
